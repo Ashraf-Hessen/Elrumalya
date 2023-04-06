@@ -1,0 +1,185 @@
+/* Variables */
+:root {
+  --mainColor: #469b4c;
+}
+/*** Start Overriding Bootstrap ***/
+.btn {
+  padding-inline: 15px;
+}
+.btn:focus {
+  box-shadow: none;
+}
+/*** End Overriding Bootstrap ***/
+
+/* Start Global Rule */
+*:focus {
+  outline: none;
+}
+/* End Global Rule */
+
+/* Start Navbar */
+.navbar .logo {
+  width: 100px;
+}
+.navbar .navbar-nav {
+  column-gap: 50px;
+}
+.navbar .navbar-nav .nav-link {
+  color: #000;
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+  color: var(--mainColor);
+}
+.navbar .contact-link {
+  color: var(--mainColor);
+  border-color: var(--mainColor);
+}
+.navbar .contact-link:hover {
+  background-color: var(--mainColor);
+  color: #ffff;
+}
+/* End Navbar */
+/* Start Hero */
+.hero {
+  height: 100vh;
+  background: url("../images/hero.jpg") no-repeat right;
+}
+.hero > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.hero h1 {
+  width: 90%;
+  text-align: left;
+  color: #000;
+}
+.hero p {
+  color: #aaa;
+}
+@media (min-width: 1024px) {
+  .hero {
+    background-size: 70% 100%;
+  }
+  .hero > div {
+    align-items: start;
+  }
+  .hero h1 {
+    width: 40%;
+    font-size: 70px;
+  }
+  .hero p {
+    width: 25%;
+    font-size: x-small;
+  }
+}
+@media (max-width: 1023px) {
+  .hero > div {
+    background-color: #fffa;
+  }
+  .hero h1 {
+    text-align: center;
+  }
+  .hero p {
+    width: 80%;
+    text-align: center;
+  }
+}
+/* End Hero */
+/* Start Brief History */
+.brief-history {
+  margin-bottom: 150px;
+}
+.brief-history .main-image {
+  width: 90%;
+}
+.brief-history .sub-image {
+  width: 70%;
+  top: 70%;
+  left: 30%;
+}
+@media (max-width: 767px) {
+  .brief-history {
+    margin-bottom: 0;
+  }
+  .brief-history .image {
+    margin-top: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .brief-history.section {
+    padding-block: 0;
+  }
+}
+/* End Brief History */
+/* Start Operate */
+@media (max-width: 767px) {
+  .operate .image {
+    margin-top: 15px;
+  }
+}
+/* End Operate */
+/* Start About */
+.about h3 {
+  font-size: x-large;
+}
+/* End About */
+/* Start Footer */
+.footer {
+  background-color: #192835;
+}
+.footer .logo {
+  width: 180px;
+}
+@media (max-width: 767px) {
+  .footer .social {
+    justify-content: center;
+  }
+}
+/* End Footer */
+/* Start Copyright */
+.copyright {
+  background-color: #000;
+  color: #fff;
+}
+/* End Copyright */
+
+/* Start Framework */
+.section {
+  padding-block: 50px;
+}
+
+.heading {
+  font-size: xxx-large;
+}
+
+.heading + p,
+.about p {
+  font-size: x-small;
+  width: 70%;
+}
+
+.main-text {
+  color: var(--mainColor);
+}
+.main-btn {
+  width: max-content;
+  background-color: var(--mainColor);
+  color: #000;
+  border-radius: 50px;
+}
+@media (max-width: 767px) {
+  .heading {
+    font-size: xx-large;
+  }
+  .heading + p,
+  .about p {
+    font-size: x-small;
+    width: 100%;
+  }
+}
+/* End Framework */

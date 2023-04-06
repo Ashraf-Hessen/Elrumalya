@@ -1,0 +1,296 @@
+/* Start Header */
+
+.header {
+    overflow: hidden;
+}
+
+.scroll-lock .header {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+}
+
+.navbar-toggler {
+    color: #00E382;
+}
+
+.header .navbar {
+    background-color: #3c1f72;
+}
+
+.header .navbar.bg-white .navbar-nav .nav-item .nav-link {
+    color: #00E382;
+    border: 1px solid #00E382;
+    box-shadow: none;
+}
+
+.header .hero-section {
+    height: 100vh;
+}
+
+.header .heading,
+.header .register-btn {
+    z-index: 3;
+    position: static;
+    right: 0;
+    left: 0;
+    top: 0;
+    transform: translatex(0) translateY(0);
+}
+
+.header .heading {
+    font-size: xxx-large;
+}
+
+.header .register-btn {
+    width: max-content;
+    font-size: x-large;
+    animation: down-up .5s infinite alternate ease;
+}
+
+/*** Media Query ***/
+
+/* Small Screen */
+
+@media (max-width: 767px) {
+    .header .heading {
+        font-size: xx-large !important;
+    }
+
+    .header .register-btn {
+        font-size: large !important;
+    }
+}
+
+/* Medium Screen */
+
+@media (max-width: 991px) {
+    .header {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .header .heading {
+        top: 0;
+    }
+}
+
+/* End Header */
+
+/* Start Stepper */
+
+.stepper {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.stepper .step {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 15px;
+    color: #FFF;
+    box-shadow: 0px 0px 5px #ddd;
+}
+
+.stepper .circle {
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    color: #FFF;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease;
+}
+
+.stepper .step .label {
+    color: #eee;
+    margin-right: 5px;
+    margin-left: 5px;
+    transition: all .5s ease;
+}
+
+.stepper .step.active {
+    border: 2px solid #00E382;
+}
+
+.stepper .step.active .circle {
+    background-color: #00E382;
+    color: #FFF;
+}
+
+.stepper .step.active .label {
+    color: #00E382;
+}
+
+.stepper .step.completed {
+    background-color: #00E382;
+    border: 2px solid #FFF;
+}
+
+.stepper .step.completed .circle {
+    background-color: #FFF;
+    color: #00E382;
+}
+
+.stepper .step.completed .label {
+    color: #FFF;
+}
+
+.stepper .step:not(:last-of-type)::after {
+    content: "";
+    width: 50px;
+    padding: .1px 0px;
+    position: absolute;
+    background-color: #fff5;
+    top: 50%;
+    right: calc(100% + 10px);
+    transform: translatey(-50%);
+}
+
+.stepper .step.completed::after {
+    background-color: #00E38255;
+}
+
+/* Media Query */
+/* Medium Screen and less */
+@media (max-width: 991px) {
+    .step-container {
+        margin-bottom: 15px;
+    }
+}
+
+/* End Stepper */
+
+/* Start Form Sections */
+
+.form-sec {
+    display: none;
+}
+
+.form-sec.active {
+    display: block;
+}
+
+.form-sec .sec-heading {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.label {
+    font-size: medium;
+    margin-bottom: 2px;
+}
+
+.form-control {
+    background-color: #EEEa;
+    border: none;
+    border-radius: 0.25rem !important;
+}
+
+.form-control:focus,
+.form-control:hover {
+    color: #212529;
+    background-color: #FFF;
+    border: 2px solid #00E382;
+    outline: 0;
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+}
+
+.form-control.empty {
+    box-shadow: 0px 0px 3px #F00;
+}
+
+.form-control.empty::placeholder {
+    color: #F005;
+}
+
+.input-group-text {
+    background-color: #EEE;
+    color: #777;
+    font-size: 15px;
+    padding: 10.5px 11px;
+    border: none;
+    /* border-radius: 0 0.25rem 0.25rem 0; */
+}
+
+.input-group-text[data-lang="en"] {
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.input-group-text[data-lang="ar"] {
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.input-group-prepend+.form-control[data-lang="ar"] {
+    border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+.input-group-prepend+.form-control[data-lang="en"] {
+    border-radius: 0 0.25rem 0.25rem 0 !important;
+}
+
+.form-check-label {
+    font-size: medium;
+}
+
+.form-check-input:checked,
+.form-check-input:focus {
+    background-color: #00E382;
+    border-color: #00E382;
+    box-shadow: none;
+}
+
+.reg-btn {
+    font-size: x-small;
+}
+
+/**** Media Query ****/
+
+/* Small screen */
+
+@media (max-width: 767px) {
+    .form-section {
+        width: 90%;
+    }
+}
+
+/* End Form Sections */
+
+/* Start Control Buttons */
+
+.control-btns .btn {
+    font-size: x-small;
+    font-weight: bold;
+}
+
+.control-btns .btn:hover,
+.control-btns .btn:focus {
+    box-shadow: none;
+}
+
+.control-btns button.hidden {
+    display: none;
+}
+
+/* End Control Buttons */
+
+/* Start My framework */
+
+.scroll-lock {
+    overflow: hidden;
+}
+
+.disabled {
+    display: none !important;
+}

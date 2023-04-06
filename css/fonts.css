@@ -1,0 +1,11 @@
+/* Playfair Display Font */
+@font-face {
+  src: url("../fonts/EduNSWACTFoundation.ttf");
+  font-family: "EduNSWACTFoundation";
+}
+
+/* Kufi Font */
+@font-face {
+  src: url("../fonts/ReemKufi-VariableFont_wght.ttf");
+  font-family: "kufi";
+}
