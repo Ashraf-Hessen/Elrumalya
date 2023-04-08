@@ -22,8 +22,8 @@
 *:focus {
   outline: none;
 }
-body {
-  font-family: "Work Sans";
+* {
+  font-family: 'Work Sans', sans-serif;
 }
 /* End Global Rule */
 
