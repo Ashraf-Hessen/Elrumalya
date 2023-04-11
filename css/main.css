@@ -9,6 +9,9 @@
 .btn:focus {
   box-shadow: none;
 }
+.btn:hover {
+  color: auto;
+}
 .navbar-toggler {
   border: none;
 }
