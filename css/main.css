@@ -418,7 +418,7 @@
 }
 .main-text,
 .main-text:hover {
-  color: var(--mainColor);
+  color: var(--mainColor) !important;
 }
 .main-btn {
   width: max-content;
