@@ -416,7 +416,8 @@
 .green-bg {
   background-color: #8cc63f;
 }
-.main-text {
+.main-text,
+.main-text:hover {
   color: var(--mainColor);
 }
 .main-btn {
