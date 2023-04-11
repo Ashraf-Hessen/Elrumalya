@@ -1,10 +1,11 @@
 /* Variables */
 :root {
-  --mainColor: #469b4c;
+  --mainColor: #4f74a0;
 }
 /*** Start Overriding Bootstrap ***/
 .btn {
   padding-inline: 15px;
+  border-radius: 8px;
 }
 .btn:focus {
   box-shadow: none;
@@ -31,9 +32,6 @@
 /* End Global Rule */
 
 /* Start Navbar */
-.navbar {
-  background-color: #f5f5f5;
-}
 .navbar .logo {
   width: 100px;
 }
@@ -43,8 +41,9 @@
 .navbar .navbar-nav .nav-link {
   color: #000;
 }
+.navbar .navbar-nav .nav-link.active,
 .navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active {
+.navbar .navbar-nav .nav-link:focus {
   color: var(--mainColor);
 }
 .navbar .contact-link {
@@ -70,23 +69,15 @@
 }
 /* End Navbar */
 /* Start Hero */
-.hero .hero-image {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 30%;
-  background: url("../images/hero.jpg") no-repeat;
-  z-index: 1;
+.hero {
+  position: relative;
+  background: url("../images/hero.jpg") no-repeat right;
+  background-size: 100% 100%;
 }
 
 .hero .dotted {
   top: 0px;
   left: -62px;
-}
-.hero > .container {
-  position: sticky;
-  z-index: 1;
 }
 .hero .dotted img {
   width: 200%;
@@ -110,7 +101,7 @@
   font-size: 15px;
 }
 @media (min-width: 1024px) {
-  .hero .hero-image {
+  .hero {
     background-size: 70% 100%;
   }
   .hero > .container {
@@ -128,9 +119,8 @@
   .hero > .container {
     background-color: #fffa;
   }
-  .hero .hero-image {
+  .hero {
     background-size: cover;
-    left: 0;
   }
   .hero h1 {
     text-align: center;
@@ -138,7 +128,12 @@
   }
   .hero p {
     width: 80%;
+    color: #777;
     text-align: center;
+    font-size: 20px;
+  }
+  .hero .dotted {
+    display: none;
   }
 }
 /* End Hero */
@@ -146,7 +141,6 @@
 
 .partners {
   overflow: hidden;
-  background-color: #f5f5f5;
 }
 
 .partners .logo {
@@ -183,7 +177,7 @@
 }
 @media (max-width: 767px) {
   .brief-history {
-    margin-bottom: 200px;
+    margin-bottom: 300px;
     padding-top: 50px;
   }
   .brief-history .main-image {
@@ -226,6 +220,9 @@
 }
 /* End Brief History */
 /* Start About */
+.about {
+  padding-block: 40px;
+}
 .about > .container {
   position: sticky;
   z-index: 1;
@@ -315,6 +312,11 @@
   transform: scaleX(1);
 }
 /* End Services */
+/* Start Projects */
+.projects-list {
+  row-gap: 15px;
+}
+/* End Projects */
 /* Start Contact Form */
 .contact-form.abstract-grey {
   padding-block: 40px;
@@ -333,6 +335,20 @@
 }
 .contact-form .form-row {
   row-gap: 20px;
+}
+.contact-form label {
+  font-size: large;
+}
+.contact-form .form-control {
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.contact-form .form-control:focus {
+  border-color: #4f74a0aa;
+}
+.contact-form textarea {
+  resize: none;
 }
 .contact-form .form-row button {
   margin-right: 10px;
@@ -366,12 +382,14 @@
   position: relative;
   overflow: hidden;
 }
-.overly {
+.abstract-grey::before {
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: #fffa;
   top: 0;
+  z-index: 0;
 }
 .dotted {
   width: 260px;
@@ -381,7 +399,7 @@
   border-radius: 50%;
   overflow: hidden;
   background-size: 39%;
-  opacity: 0.3;
+  opacity: 0.1;
   box-shadow: 0px 0px 200px white inset;
   z-index: 0;
 }
@@ -404,6 +422,9 @@
   width: 100%;
 }
 
+.image img {
+  border-radius: 8px;
+}
 .image .main-image {
   overflow: hidden;
 }
@@ -420,17 +441,19 @@
 .main-text:hover {
   color: var(--mainColor) !important;
 }
-.main-btn {
+.main-btn,
+.main-btn:hover,
+.main-btn:focus {
   width: max-content;
   background-color: var(--mainColor);
-  color: #000;
-  border-radius: 50px;
+  color: #fff;
 }
 @media (max-width: 992px) {
   .section {
     padding-top: 50px;
   }
   .heading {
+    font-weight: bold;
     font-size: xx-large;
   }
   .heading + p,
