@@ -270,6 +270,7 @@
 .services .service-branch {
   background-color: white;
   box-shadow: 0px 0px 15px #eee;
+  border-radius: 8px;
   transition: 0.5s;
 }
 .services .service-branch {
