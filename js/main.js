@@ -12,6 +12,10 @@ $(document).ready(function () {
     margin: 10,
     responsiveClass: true,
     dots: false,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
     responsive: {
       0: {
         items: 3,
@@ -24,10 +28,6 @@ $(document).ready(function () {
       1000: {
         items: 6,
         nav: false,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 2000,
-        autoplayHoverPause: true,
       },
     },
   });
