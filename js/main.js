@@ -1,6 +1,7 @@
 $(document).ready(function () {
   "use strict";
 
+  $(".loading").fadeOut();
   // Adjust Slider Height
   var winH = $(window).height(),
     navH = $(".navbar").innerHeight();
