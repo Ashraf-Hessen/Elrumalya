@@ -24,7 +24,7 @@
 
 /* Start Global Rule */
 * {
-  font-family: "Work Sans";
+  font-family: "Work Sans", "Tajawal";
 }
 *:focus {
   outline: none;
@@ -115,10 +115,14 @@
   background: url("../images/hero.jpg") no-repeat right;
   background-size: 100% 100%;
 }
+body[dir="rtl"] .hero {
+  background-position: left;
+}
 
 .hero .dotted {
   top: 0px;
   left: -62px;
+  right: -62px;
 }
 .hero .dotted img {
   width: 200%;
@@ -149,7 +153,6 @@
     align-items: start;
   }
   .hero h1 {
-    text-align: left;
     font-size: 67px;
   }
   .hero p {
@@ -215,6 +218,7 @@
   width: 70%;
   top: 75%;
   left: 40%;
+  right: 40%;
 }
 @media (max-width: 767px) {
   .brief-history {
@@ -228,6 +232,7 @@
     width: 70%;
     top: 75%;
     left: 30%;
+    right: 30%;
   }
   .brief-history .image {
     margin-top: 15px;
@@ -246,6 +251,7 @@
     width: 70%;
     top: 75%;
     left: 30%;
+    right: 30%;
   }
   .brief-history .image {
     margin-top: 15px;
@@ -404,6 +410,7 @@
 .footer .logo {
   width: 180px;
 }
+
 @media (max-width: 767px) {
   .footer .social {
     justify-content: center;
@@ -464,7 +471,6 @@
 .operate p {
   width: 100%;
 }
-
 .image img {
   border-radius: 8px;
 }
@@ -490,7 +496,14 @@
   width: max-content;
   background-color: var(--mainColor);
   color: #fff;
+  transition: 0.3s;
 }
+
+.main-btn:hover,
+.main-btn:focus {
+  background-color: #3d5879;
+}
+
 @media (max-width: 992px) {
   .section {
     padding-top: 50px;
@@ -511,6 +524,11 @@
 @font-face {
   font-family: "Work Sans";
   src: url("../fonts/WorkSans-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Tajawal";
+  src: url("../fonts/Tajawal.ttf");
 }
 
 /* Animations */
